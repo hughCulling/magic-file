@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"
+        <title></title>
+</head>
+<body>
+<button>
+<a href="/home">
+<img src ="/static/Images/Actual symbol.jpg" alt="Home button" width="71" height="71"></a>
+</button>
+    <h1>Artist details</h1>
+    {% for post in posts %}
+        <h2>{{ post.artistName }}</h2>
+        <p>{{ post.songName }}   Release date: {{post.releaseDate}}</p>
+    {% endfor %}
+</body>
+</html>
